@@ -1,0 +1,1164 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/bootstrap-select.min.css">
+    <script src="/static/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+
+    <link rel="stylesheet" href="/static/css/bootstrap-datetimepicker.min.css">
+    <script src="/static/js/moment-with-locales.min.js"></script>
+    <script src="/static/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/static/js/bootstrap.file-input.js"></script>
+    <script src='/static/js/tablesorter.min.js'></script>
+
+    <link rel="stylesheet" href="/static/css/navbar_style.css">
+
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+        $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            // open or close navbar
+            $('#sidebar').toggleClass('active');
+            $('#content').toggleClass('pos');
+            // close dropdowns
+            $('.collapse.in').toggleClass('in');
+            // and also adjust aria-expanded attributes we use for the open/closed arrows
+            // in our CSS
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+    </script>
+
+
+    <style type='text/css'>
+        .content {
+            max-width: 800px;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+        .wide-content {
+            width: 1000px;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+        .fullwide-content {
+            width: 100%;
+            padding-top: 9px;
+            padding-left: 15px;
+        }
+    ol {
+        padding-left: 15px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+<nav id="sidebar" style="overflow:auto">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+        <h4 style="text-align: center">Григорий</h4>
+    </div>
+
+     <!-- Sidebar Links -->
+    <ul class="list-unstyled components">
+        <!-- Link with dropdown items -->
+<li>
+<a class="const-grey" class="const-grey" href="#left_drop_down" data-toggle="collapse" aria-expanded="false">
+        Глубокое обучение 2024-2025
+</a>
+<ul class="collapse list-unstyled" id="left_drop_down">
+            <li><a class="const-grey" href="/course/7/info">Машинное обучение 2023-2024</a></li>
+
+        <li class="separator"></li>
+
+
+
+
+        <li><a class="const-grey" href="/add_user_to_course">Присоединиться к курсу</a></li>
+
+
+
+
+
+
+</ul>
+</li><li>
+    <a class="const-grey" href='/course/13/info'>
+        Материалы
+    </a>
+</li>
+<li class="separator"></li>
+<li>
+        <li>
+            <a class="const-grey"  href='/course/13/task/1'>
+                1. Введение в PyTorch - 1 (полносвязные нейросети) [2024]
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/13/task/2'>
+                2. Введение в PyTorch - 1 (сверточные нейросети) [2024]
+            </a>
+        </li>
+        <li class='active'>
+            <a class="const-grey"  href='/course/13/task/3'>
+                3. Тест (лекции 1-5) [2024]
+            </a>
+        </li>
+        <li>
+            <a class="const-grey"  href='/course/13/task/4'>
+                4. Семантическая сегментация [2024]
+            </a>
+        </li>
+</li>
+<li class="separator"></li>        <li>
+            <a class="const-grey" href='/course/13/standings'>
+                Таблица результатов
+            </a>
+        </li>
+<li>
+    <a class="const-grey" href='/logout'>Выйти</a>
+</li>    </ul>
+</nav>
+<div id="content">
+        <button type="button" id="sidebarCollapse" class="btn navbar-btn"
+                style="outline: none;
+                margin-left: -35px;
+                background-color: #337ab7;
+                color: #ffffff;
+                padding: 7px;
+                position: fixed;
+">
+            <span class="glyphicon glyphicon-align-left" style=""></span>
+        </button>         <!-- Page Content -->
+<div class='content'>
+        <p>Во всех вопросах может быть несколько правильных ответов</p>
+    <p>
+    В тестовых заданиях первая галочка — правильный ответ, вторая галочка —
+    выбранный ответ. Цвет обозначает, правильно ли в данном
+    пункте поставлена галочка. Если все пункты верные (галочки
+    совпадают / все пункты зеленые), то за задание ставится
+    полный балл, в противном случае ставится 0 баллов.
+    </p>
+    <ol>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Выберите возможные наборы корректных действий, необходимых, чтобы трансформировать вашу нейросетевую архитектуру из задачи  одномерной регрессии в задачу многоклассовой классификации. </p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    добавить слой batch-нормализации, перенастроить веса с функцией потерь hinge
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    добавить в конце слой DropOut, перенастроить веса с функцией потерь MSE.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    увеличить число выходов на выходном слое, применить SoftMax, перенастроить веса с функцией потерь cross-entropy
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    увеличить число выходов на выходном слое, добавить слой batch-нормализации, перенастроить веса с функцией потерь log-loss
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    увеличить число выходов на выходном слое, перенастроить веса с функцией потерь hinge
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0.75
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Пусть входы для функции активации - случайные величины с нулевым средним. Выберите функции активации, которые дадут выходы также с нулевым средним:</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    сигмоида
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    ReLU
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    гиперболический тангенс
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    Exponential LU (ELU)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    Leaky ReLU
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0.75
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Что такое эпоха?</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    время загрузки мини-батча в память
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    период времени, когда доминирует какая-то архитектура нейросетей
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    время жизни Алана Тьюринга
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    проход по всей обучающей выборке при обучении
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0.75
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Выберите размерность выхода и выходную функцию активации $f(x)$ последнего слоя для задачи многоклассовой классификации:</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    одномерный выход, $f(x)=\text{sigmoid}(x)$
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    многомерный выход, $f(x)=\text{Softmax}(x)$
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    одномерный выход, $f(x)=x$
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0.75
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Выберите верные утверждения о батч-нормализации (BatchNorm):</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    BatchNorm имеет 3 автоматически настраиваемых параметра
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    BatchNorm обеспечивает стабильность дисперсий входов предыдущего слоя перед BatchNorm
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    BatchNorm работает по-разному в режиме обучения модели и её применения к тестовой выборке
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    BatchNorm призвана ускорить построение прогнозов нейросетью
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    BatchNorm обеспечивает стабильность дисперсий входов следующего слоя после BatchNorm
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    BatchNorm имеет 2 автоматически настраиваемых параметра
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    BatchNorm обеспечивает стабильность мат. ожиданий входов следующего слоя после BatchNorm
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    BatchNorm обеспечивает стабильность мат. ожиданий входов предыдущего слоя перед BatchNorm
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    BatchNorm обеспечивает стабильность третьих моментов входов следующего слоя после BatchNorm
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    BatchNorm обеспечивает стабильность третьих моментов входов предыдущего слоя перед BatchNorm
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    BatchNorm имеет 3 параметра, задаваемых пользователем
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    BatchNorm призвана ускорить процесс настройки нейросети 
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    BatchNorm имеет 2 параметра, задаваемых пользователем
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0.75
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Пусть в вычислительном графе $z=\max(x, y)$. При обратном распространении градиента какое значение передаётся в вершину $x$?</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    зависит от того $x &gt; y$ или $x \leq y$
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    0
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    $\max(x, y)$
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    $x$
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    $y$
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0.75
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Когда в  Pytorch надо делать обрезку градиентов (Gradient clipping)?</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    после шага оптимизации optimizer.step()
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    после вычисления ошибки (loss)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    после прямого прохода
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    после обратного прохода loss.backward()
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    после обнуления градиентов
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0.75
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+        <li>
+            <div>
+                <div style='width: 50%'>
+                    <p>Выберите преимущества метода Adam по сравнению с обычным методом стохастического градиентного спуска</p>
+                </div>
+                <div style='width: 50%'>
+                </div>
+            </div>
+                    <table>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    градиент ограничивается по норме, что обеспечивает более устойчивую оптимизацию
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    шаг изменения вдоль оси каждого отдельного веса подбирается индивидуально в зависимости от скорости изменения целевой функции вдоль оси
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled checked>
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled checked>
+                                                    используется сглаживание градиентов с текущей и предыдущих итераций, обеспечивающее более устойчивую оценку градиента
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='vertical-align: top'>
+                                    <div class='checkbox'>
+                                    <label>
+                                        <input type='checkbox' disabled >
+                                    </label>
+                                    </div>
+                                </td>
+                                <td style='vertical-align: top'>
+                                    <div class='has-success'>
+                                        <div class='checkbox'>
+                                            <label>
+                                                <input type='checkbox' disabled >
+                                                    градиент рассчитывается не в точке оценки весов с предыдущей итерации, а в точке, более приближенной к оценке весов на текущей итерации.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    <table>
+                    <b>Балл:</b>
+                        0.75
+                    <br>
+                    <b>Комментарий к правильному ответу:</b>
+                    
+                    <br>
+            </table>
+        </li>
+        <br>
+    </ol>
+</div>
+
+
+<script type='text/javascript'>
+$('input[type=file]').bootstrapFileInput();
+</script>
+    </div>
+</div>
+    <script type='text/javascript'>
+    $(function () {
+        $('.timepicker').each(function(){
+            $(this).datetimepicker({format: 'DD.MM.YYYY HH:mm'});
+        });
+    });
+    </script>
+</body>
+</html>
